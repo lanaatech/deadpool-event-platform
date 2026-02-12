@@ -8,7 +8,6 @@
   --white: #FFF;
   --deadpool-red: #FF001E;
   --deadpool-title-linear: linear-gradient(90deg, #FFF, #898989);
-
   --zinc-900: #141414 ;
 }
 
@@ -25,7 +24,6 @@ body {
 header {
   position: sticky;
   top: 0;
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,7 +139,7 @@ header > nav a {
   font-size: 15vw;
 }
 
-#hero_buttons {
+.hero_buttons {
   position: absolute;
 
   display: flex;
@@ -152,7 +150,7 @@ header > nav a {
   z-index: 3;
 }
 
-#hero_buttons > button {
+.hero_buttons > button {
   padding: 1rem;
   border-radius: 9999px;
 
@@ -162,7 +160,7 @@ header > nav a {
 }
 
 /* Botão com o primeiro estilo */
-#hero_buttons > button:nth-child(1) {
+.hero_buttons .but-type-1 {
   background-color: var(--deadpool-red); /* Cor de fundo do botão */
   border: 1px solid var(--deadpool-red); /* Borda do botão */
   color: var(--white); /* Cor do texto do botão */
@@ -171,19 +169,19 @@ header > nav a {
 }
 
 /* Efeito hover para o primeiro botão */
-#hero_buttons > button:nth-child(1):hover {
+.hero_buttons .but-type-1:hover {
   box-shadow: 0 0 20px 10px var(--deadpool-red); /* Sombra aumentada no hover */
   transform: scale(1.05); /* Leve aumento do tamanho no hover */
 }
 
-#hero_buttons > button:nth-child(2) {
+.hero_buttons > .but-type-2 {
   background-color: transparent;
   color: var(--white);
   border: 1px solid var(--white);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o efeito hover */
 }
 
-#hero_buttons > button:nth-child(2):hover {
+.hero_buttons > .but-type-2:hover {
   transform: scale(1.05); /* Leve aumento do tamanho no hover */
 }
 

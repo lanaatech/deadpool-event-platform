@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadpool</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/reservation.css">
+</head>
+
+<body>
+    <header>
+    <img src="assets/logo.png" alt="">
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="reservation.html">Reservar</a></li>
+        <li><a href="ticket.html">Ingressos</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <main class="booking-main">
+        <section class="reservation-container">
+            <div class="form-card">
+                <h2 class="title-red">RESERVE SUA VAGA NO CAOS</h2>
+                <form id="reservation-form">
+                    <div class="input-group">
+                        <label>Seu Nome (ou codinome):</label>
+                        <input type="text" id="user-name" required placeholder="Ex: Wade Wilson">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Data da Incursão:</label>
+                        <input type="date" id="mission-date" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Nível da Experiência:</label>
+                        <select id="mission-tier">
+                            <option value="Básico">Básico (Posso morrer)</option>
+                            <option value="Premium">Premium (Com Chimichangas)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-confirm">CONFIRMAR RESERVA</button>
+                </form>
+            </div>
+
+            <div id="ai-chat-box" class="hidden">
+                <div class="ai-avatar">
+                    <img src="assets/deadpool-head.png" alt="Deadpool">
+                </div>
+                <div class="ai-bubble">
+                    <p id="ai-response-text">Analisando se eu me importo...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/reservation.js"></script>
+</body>
+
+</html>
