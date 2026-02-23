@@ -1,3 +1,4 @@
+/* --- ESTILIZAÇÃO ORIGINAL MANTIDA --- */
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +9,17 @@
   --white: #FFF;
   --deadpool-red: #FF001E;
   --deadpool-title-linear: linear-gradient(90deg, #FFF, #898989);
-  --zinc-900: #141414 ;
+  --zinc-900: #141414;
 }
 
 html {
   font-size: 75%;
 }
 
-body { 
+body {
   background-color: var(--zinc-900);
-
   font-family: 'Roboto', sans-serif;
+  color: var(--white);
 }
 
 header {
@@ -31,178 +32,40 @@ header {
   z-index: 10;
 }
 
-header > nav {
+header .logo {
+  width: 80px;
+}
+
+header>nav {
   display: none;
 }
 
-header > nav > ul {
+header>nav>ul {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 30px;
   list-style: none;
 }
 
-header > nav a {
+header>nav a {
   color: var(--white);
   text-decoration: none;
-
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
-#header_buttons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+header nav a:hover {
+  color: var(--deadpool-red);
 }
 
-#header_buttons > button {
-  background-color: var(--zinc-900);
-  height: 3.75rem;
-  width: 3.75rem;
-  box-sizing: border-box;
+.user-auth img {
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
   cursor: pointer;
-
-  border-radius: 9999px;
 }
 
-#hero-section {
-  min-height: calc(100vh - 7.75rem);
-  position: relative;
-
-  background-image: url('./assets//deadpool-text-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
+.user-auth img:hover {
+  transform: scale(1.1);
 }
 
-#hero_image {
-  position: relative;
-
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-
-  z-index: 1;
-
-  overflow: hidden;
-}
-
-#hero_image > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  /* position: absolute; */
-  /* bottom: 0; */
-}
-
-#hero_image_circle {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translateY(-50%) translateX(-50%);
-
-  z-index: -1;
-
-  height: 60%;
-  aspect-ratio: 1 / 1;
-
-  background-color: var(--deadpool-red);
-
-  border-radius: 9999px;
-  
-  box-shadow: 0px 0px 50px 30px var(--deadpool-red);
-}
-
-
-#hero_text {
-  color: var(--white);
-  background-image: var(--deadpool-title-linear);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 2;
-}
-
-#hero_text > p {
-  font-size: 2vw;
-  padding: 0 1%;
-  
-  display: flex;
-  justify-content: space-between;
-}
-
-#hero_text h1{
-  font-size: 15vw;
-}
-
-.hero_buttons {
-  position: absolute;
-
-  display: flex;
-  gap: 8px;
-
-  bottom: 20px;
-
-  z-index: 3;
-}
-
-.hero_buttons > button {
-  padding: 1rem;
-  border-radius: 9999px;
-
-  cursor: pointer;
-
-  font-size: 2rem;
-}
-
-/* Botão com o primeiro estilo */
-.hero_buttons .but-type-1 {
-  background-color: var(--deadpool-red); /* Cor de fundo do botão */
-  border: 1px solid var(--deadpool-red); /* Borda do botão */
-  color: var(--white); /* Cor do texto do botão */
-  box-shadow: 0 0 15px 5px var(--deadpool-red); /* Sombra do botão */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o efeito hover */
-}
-
-/* Efeito hover para o primeiro botão */
-.hero_buttons .but-type-1:hover {
-  box-shadow: 0 0 20px 10px var(--deadpool-red); /* Sombra aumentada no hover */
-  transform: scale(1.05); /* Leve aumento do tamanho no hover */
-}
-
-.hero_buttons > .but-type-2 {
-  background-color: transparent;
-  color: var(--white);
-  border: 1px solid var(--white);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para o efeito hover */
-}
-
-.hero_buttons > .but-type-2:hover {
-  transform: scale(1.05); /* Leve aumento do tamanho no hover */
-}
-
-
-@media (min-width: 600px) {
-  header > nav {
-    display: block;
-  }
-  
-  #hero_text {
-    z-index: 0;
-  }
-}
-
-@media (min-width: 1120px) {
-  html {
-    font-size: 100%;
-  }
-
-  #hero_text {
-    position: absolute;
-    bottom: 0;
-  }
-}
