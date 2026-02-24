@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil - Deadpool Event</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="./frontend/css/profile.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../css/profile.css">
 </head>
+
 <body>
-    <header>
-    <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo">
+  <header>
+    <a href="../../index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
 
     <nav>
       <ul>
@@ -32,5 +34,117 @@
       </a>
     </div>
   </header>
+
+  <main class="profile-main">
+    <section class="login-section" id="login">
+      <div class="login-card">
+        <h1 class="title-red">CREDENCIAMENTO</h1>
+        <p class="login-subtitle">
+          Faça login para acessar seu perfil, acompanhar reservas e desbloquear estatísticas do seu nível de caos.
+        </p>
+
+        <form class="login-form">
+          <div class="input-group">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" placeholder="voce@chimichanga.com" required>
+          </div>
+
+          <div class="input-group">
+            <label for="login-password">Senha</label>
+            <input type="password" id="login-password" placeholder="********" required>
+          </div>
+
+          <button type="submit" class="btn-confirm">Entrar</button>
+
+          <p class="login-helper">
+            Ainda não tem cadastro? Basta reservar um evento na página de
+            <a href="./events.html">Eventos</a> que criamos um perfil para você automaticamente.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="profile-header" id="profile">
+      <div class="profile-identity">
+        <div class="profile-avatar">
+          <span>DP</span>
+        </div>
+        <div>
+          <h1 class="title-red">MEU PERFIL</h1>
+          <p class="profile-tagline">
+            Ajuste seus dados, acompanhe reservas e veja o quanto de caos você já espalhou pelo <strong>Deadpool
+              Event</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-stats">
+        <div class="profile-stat-card">
+          <span class="stat-label">Invasões Participadas</span>
+          <span class="stat-value">0</span>
+        </div>
+        <div class="profile-stat-card">
+          <span class="stat-label">Nível de Caos</span>
+          <span class="stat-value">Novato</span>
+        </div>
+        <div class="profile-stat-card">
+          <span class="stat-label">Chimichangas Consumidas</span>
+          <span class="stat-value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-grid">
+      <div class="profile-card">
+        <h2>Dados do Mercenário</h2>
+        <form id="profile-form">
+          <div class="input-group">
+            <label for="profile-name">Nome / Codinome</label>
+            <input type="text" id="profile-name" placeholder="Ex: Wade Wilson">
+          </div>
+
+          <div class="input-group">
+            <label for="profile-email">E-mail</label>
+            <input type="email" id="profile-email" placeholder="voce@chimichanga.com">
+          </div>
+
+          <div class="input-group">
+            <label for="profile-country">País / Base de Operação</label>
+            <input type="text" id="profile-country" placeholder="Ex: Brasil">
+          </div>
+
+          <div class="input-group">
+            <label for="profile-tier">Tipo de Invasor Favorito</label>
+            <select id="profile-tier">
+              <option value="basico">Básico (sobrevive na sorte)</option>
+              <option value="premium">Premium (vem pelo after)</option>
+              <option value="lendario">Lendário (já brigou com o Logan)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-confirm">Salvar perfil</button>
+        </form>
+      </div>
+
+      <div class="profile-card">
+        <h2>Minhas Reservas</h2>
+        <p>
+          Aqui aparecerão os eventos que você reservou na página de
+          <a href="./events.html">Eventos</a>. Use este espaço para acompanhar datas,
+          cidades e o nível de caos escolhido.
+        </p>
+
+        <ul class="profile-reservations">
+          <li class="reservation-empty">
+            Nenhuma reserva encontrada… ainda.<br>
+            <a href="./events.html">Clique aqui para escolher sua primeira invasão.</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../js/navbar.js"></script>
 </body>
+
 </html>

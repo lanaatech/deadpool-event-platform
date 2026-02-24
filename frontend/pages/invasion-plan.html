@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deadpool</title>
+  <title>Plano de Invasão - Deadpool Event</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="./frontend/css/invasion-plan.css">
+  <link rel="stylesheet" href="../css/invasion-plan.css">
 </head>
-
 <body>
   <header>
-    <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo">
+    <a href="../../index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
 
     <nav>
       <ul>
@@ -35,28 +33,70 @@
     </div>
   </header>
 
-  <main>
-    <section id="hero-section">
-      <div id="hero_image">
-        <img src="assets/deadpool.png" alt="Deadpool com os braços cruzados olhando em direção ao leitor">
-        <span id="hero_image_circle"></span>
-      </div>
-
-      <div id="hero_text">
-        <p>
-          <span>Lançamento em</span>
-          <span>25 de julho</span>
+  <main class="plan-main">
+    <section class="plan-hero">
+      <div class="plan-hero-text">
+        <p class="plan-kicker">Roteiro oficial do caos</p>
+        <h1>PLANO DE INVASÃO</h1>
+        <p class="plan-subtitle">
+          Do primeiro chimichanga até o pós-créditos: veja como funciona a experiência completa do Deadpool Event.
         </p>
-
-        <h1>DEADPOOL</h1>
       </div>
-
-      <div id="hero_buttons">
-        <button>Reservar agora</button>
-        <button>Ingressos</button>
+      <div class="plan-hero-art">
+        <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool.png"
+          alt="Deadpool pronto para o ataque">
+        <span class="plan-hero-circle"></span>
       </div>
     </section>
-  </main>
-</body>
 
+    <section class="plan-steps">
+      <article class="plan-card">
+        <span class="plan-step-number">01</span>
+        <h2>ESCOLHA SUA INVASÃO</h2>
+        <p>
+          Acesse a página de <a href="./events.html">Eventos</a> e selecione a cidade, data e nível de loucura.
+          Alguns pacotes incluem encontros “amigáveis” com mutantes conhecidos.
+        </p>
+      </article>
+
+      <article class="plan-card">
+        <span class="plan-step-number">02</span>
+        <h2>MONTE SEU DISFARCE</h2>
+        <p>
+          Traje opcional, atitude obrigatória. Use cosplay, máscara, ou apenas seu mau humor natural. Só não venha
+          de Wolverine sem estar preparado para piadas.
+        </p>
+      </article>
+
+      <article class="plan-card">
+        <span class="plan-step-number">03</span>
+        <h2>CHEGUE NO PONTO DE ENCONTRO</h2>
+        <p>
+          Ao chegar, siga a sinalização nada discreta do Deadpool. Lá você faz check-in, pega brindes e descobre
+          qual missão secreta vai cumprir durante o evento.
+        </p>
+      </article>
+
+      <article class="plan-card">
+        <span class="plan-step-number">04</span>
+        <h2>CUMPRA A MISSÃO</h2>
+        <p>
+          Shows, ativações, desafios e interações com outros invasores. A cada etapa concluída, sua pulseira registra
+          o quanto de caos você espalhou pelo lugar.
+        </p>
+      </article>
+
+      <article class="plan-card">
+        <span class="plan-step-number">05</span>
+        <h2>PÓS-CRÉDITOS</h2>
+        <p>
+          Depois da invasão, acesse seu <a href="./profile.html">Perfil</a> para ver conquistas, fotos especiais e
+          convites antecipados para os próximos planos secretos.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="../../js/navbar.js"></script>
+</body>
 </html>

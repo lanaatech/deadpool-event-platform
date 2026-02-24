@@ -1,0 +1,84 @@
+.about-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem 8rem;
+}
+
+.about-hero {
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.about-hero .title-red {
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: var(--deadpool-red);
+  margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.about-section {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 18px;
+  padding: 2.5rem 2.8rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--deadpool-red);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-section p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  color: var(--deadpool-red);
+}
+
+.about-section a {
+  color: var(--deadpool-red);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.about-section a:hover {
+  border-bottom-color: var(--deadpool-red);
+}
+
+@media (max-width: 768px) {
+  .about-main {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .about-section {
+    padding: 2rem;
+  }
+}

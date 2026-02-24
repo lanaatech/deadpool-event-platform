@@ -1,5 +1,5 @@
 #hero-section {
-  min-height: calc(100vh - 7.75rem);
+  min-height: 100vh;
   position: relative;
   background-image: url('https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool-text-bg.png');
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-#hero_image>img {
+#hero_image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -34,7 +34,7 @@
   aspect-ratio: 1 / 1;
   background-color: var(--deadpool-red);
   border-radius: 9999px;
-  box-shadow: 0px 0px 50px 30px var(--deadpool-red);
+  box-shadow: 0px 0px 70px 30px var(--deadpool-red);
 }
 
 #hero_text {
@@ -89,11 +89,9 @@ button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero_buttons>.but-type-2:hover {
+.but-type-2:hover {
   transform: scale(1.05);
 }
-
-/* --- ESTILO DAS NOVAS SEÇÕES (INTEGRAÇÃO) --- */
 
 #about-event {
   padding: 100px 5%;
@@ -165,20 +163,27 @@ button {
   filter: grayscale(0);
 }
 
-.city-badge {
-  margin-left: 10px;
-}
-
 .card-info {
   padding: 2rem;
 }
 
+.card-info span {
+  padding: 0.2rem 0.9rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border: 1px solid #444;
+}
+
 .card-info h3 {
   font-size: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .btn-card {
+  font-size: 16px;
   color: var(--deadpool-red);
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -219,20 +224,12 @@ button {
 /* --- RESPONSIVIDADE ORIGINAL --- */
 
 @media (min-width: 600px) {
-  header>nav {
-    display: block;
-  }
-
   #hero_text {
     z-index: 0;
   }
 }
 
 @media (min-width: 1120px) {
-  html {
-    font-size: 100%;
-  }
-
   #hero_text {
     position: absolute;
     bottom: 0;

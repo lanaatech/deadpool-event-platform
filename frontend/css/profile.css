@@ -1,31 +1,224 @@
-.seats-grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 10px;
-    perspective: 500px; /* Gives a 3D theater feel */
+.profile-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem 8rem;
 }
 
-.seat {
-    width: 30px;
-    height: 25px;
-    background-color: #444;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
+.login-section {
+  margin-bottom: 4rem;
 }
 
-.seat.selected {
-    background-color: var(--deadpool-red);
-    box-shadow: 0 0 10px var(--deadpool-red);
+.login-card {
+  background: #111;
+  border-radius: 18px;
+  border: 1px solid #333;
+  padding: 2.8rem 2.8rem 3rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  max-width: 520px;
 }
 
-.seat.occupied {
-    background-color: #1a1a1a;
-    cursor: not-allowed;
-    opacity: 0.3;
+.login-subtitle {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin: 0.8rem 0 2rem;
 }
 
-.seat:hover:not(.occupied) {
-    transform: scale(1.2);
+.login-form .btn-confirm {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-helper {
+  margin-top: 1.4rem;
+  font-size: 1.1rem;
+  color: #c4c4c4;
+}
+
+.login-helper a {
+  color: var(--deadpool-red);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.login-helper a:hover {
+  border-bottom-color: var(--deadpool-red);
+}
+
+.profile-header {
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 0%, #ffffff, var(--deadpool-red));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #000;
+  box-shadow: 0 0 16px rgba(255, 0, 30, 0.9);
+}
+
+.profile-tagline {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  max-width: 32rem;
+}
+
+.profile-header .title-red {
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.profile-stat-card {
+  background: #111;
+  border-radius: 16px;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid #333;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+}
+
+.stat-label {
+  display: block;
+  font-size: 1.1rem;
+  color: #c4c4c4;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+.profile-card {
+  background: #111;
+  border-radius: 18px;
+  border: 1px solid #333;
+  padding: 2.5rem 2.8rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.profile-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--deadpool-red);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.input-group label {
+  font-size: 1.2rem;
+  color: #d0d0d0;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid #444;
+  background: #050505;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.btn-confirm {
+  margin-top: 0.8rem;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--deadpool-red);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 0, 30, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(255, 0, 30, 0.8);
+}
+
+.profile-card p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.profile-reservations {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.reservation-empty {
+  color: #b3b3b3;
+}
+
+.profile-card a {
+  color: var(--deadpool-red);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.profile-card a:hover {
+  border-bottom-color: var(--deadpool-red);
+}
+
+@media (max-width: 900px) {
+  .profile-main {
+    padding: 4.5rem 1.5rem 6rem;
+  }
+
+  .profile-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-identity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
 }
