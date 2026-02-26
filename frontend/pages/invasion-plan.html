@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,12 @@
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../css/invasion-plan.css">
 </head>
+
 <body>
   <header>
-    <a href="../../index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
+    <a href="../../index.html"><img
+        src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo"
+        class="logo"></a>
 
     <nav>
       <ul>
@@ -36,67 +40,40 @@
   <main class="plan-main">
     <section class="plan-hero">
       <div class="plan-hero-text">
-        <p class="plan-kicker">Roteiro oficial do caos</p>
-        <h1>PLANO DE INVASÃO</h1>
-        <p class="plan-subtitle">
-          Do primeiro chimichanga até o pós-créditos: veja como funciona a experiência completa do Deadpool Event.
+        <p class="plan-kicker">Inteligência Artificial do Pool</p>
+        <h1>Plano de Invasão</h1>
+        <p class="hero-subtitle">
+          Do primeiro chimichanga até o pós-créditos: veja como funciona a experiência completa do Deadpool Event, tire
+          suas duvidas e consulte a IA para a melhor esperiência possivel.
         </p>
-      </div>
-      <div class="plan-hero-art">
-        <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool.png"
-          alt="Deadpool pronto para o ataque">
-        <span class="plan-hero-circle"></span>
       </div>
     </section>
 
-    <section class="plan-steps">
-      <article class="plan-card">
-        <span class="plan-step-number">01</span>
-        <h2>ESCOLHA SUA INVASÃO</h2>
-        <p>
-          Acesse a página de <a href="./events.html">Eventos</a> e selecione a cidade, data e nível de loucura.
-          Alguns pacotes incluem encontros “amigáveis” com mutantes conhecidos.
-        </p>
-      </article>
+    <section class="chat-container">
+      <div id="chat-window" class="chat-window">
+        <div class="message ai-message">
+          <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool.png"
+            alt="AI Avatar" class="chat-avatar">
+          <div class="message-content">
+            <p>Ora, ora... mais um humano perdido. Sou a IA do Pool. Digite sua dúvida sobre o evento (cidades, melhores
+              lugares, etc) e eu decido se te ajudo.</p>
+          </div>
+        </div>
+      </div>
 
-      <article class="plan-card">
-        <span class="plan-step-number">02</span>
-        <h2>MONTE SEU DISFARCE</h2>
-        <p>
-          Traje opcional, atitude obrigatória. Use cosplay, máscara, ou apenas seu mau humor natural. Só não venha
-          de Wolverine sem estar preparado para piadas.
-        </p>
-      </article>
-
-      <article class="plan-card">
-        <span class="plan-step-number">03</span>
-        <h2>CHEGUE NO PONTO DE ENCONTRO</h2>
-        <p>
-          Ao chegar, siga a sinalização nada discreta do Deadpool. Lá você faz check-in, pega brindes e descobre
-          qual missão secreta vai cumprir durante o evento.
-        </p>
-      </article>
-
-      <article class="plan-card">
-        <span class="plan-step-number">04</span>
-        <h2>CUMPRA A MISSÃO</h2>
-        <p>
-          Shows, ativações, desafios e interações com outros invasores. A cada etapa concluída, sua pulseira registra
-          o quanto de caos você espalhou pelo lugar.
-        </p>
-      </article>
-
-      <article class="plan-card">
-        <span class="plan-step-number">05</span>
-        <h2>PÓS-CRÉDITOS</h2>
-        <p>
-          Depois da invasão, acesse seu <a href="./profile.html">Perfil</a> para ver conquistas, fotos especiais e
-          convites antecipados para os próximos planos secretos.
-        </p>
-      </article>
+      <form id="chat-form" class="chat-input-area">
+        <input type="text" id="user-input" placeholder="Ex: Sou de Salvador e quero o melhor assento para o Insta..."
+          required>
+        <button class="but-type-1" id="voice-recorder"><img
+            src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/microfone.svg" alt=""></button>
+        <button class="but-type-2" id="to-send"><img
+            src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/seta.svg" alt=""></button>
+        </button>
+      </form>
     </section>
   </main>
 
   <script src="../js/navbar.js"></script>
 </body>
+
 </html>

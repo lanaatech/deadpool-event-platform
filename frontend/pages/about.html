@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,12 @@
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../css/about.css">
 </head>
+
 <body>
   <header>
-    <a href="../../index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
+    <a href="../../index.html"><img
+        src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo"
+        class="logo"></a>
 
     <nav>
       <ul>
@@ -35,41 +39,71 @@
 
   <main class="about-main">
     <section class="about-hero">
-      <h1 class="title-red">SOBRE O DEADPOOL EVENT</h1>
-      <p>
-        O <strong>Deadpool Event</strong> é uma experiência imersiva pensada para quem gosta de quebrar a quarta
-        parede, comer chimichangas e causar um pouco de caos controlado. Nada de conferência séria: aqui a zoeira é
-        oficial.
-      </p>
+      <div class="about-hero-content">
+        <p class="plan-kicker">Entenda tudo sobre o DeadPool Day</p>
+        <h1>Sobre o Evento e o DeadPool</h1>
+        <p class="hero-subtitle">
+          O Deadpool Event é uma imersão caótica onde a zoeira é a regra número um.
+          Nada de palestras entediantes; aqui o foco é chimichanga, multiverso e tecnologia.
+        </p>
+      </div>
     </section>
 
-    <section class="about-section">
-      <h2>O QUE VOCÊ ENCONTRA AQUI?</h2>
-      <ul class="about-list">
-        <li>Shows, ativações interativas e áreas temáticas inspiradas no universo do Deadpool.</li>
-        <li>Espaços para fotos, desafios malucos e encontros com outros fãs do anti-herói.</li>
-        <li>Experiências que se conectam com os eventos disponíveis na página de <a href="./events.html">Eventos</a>.
-        </li>
-      </ul>
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <h2 class="title-red">Evidências do Caos</h2>
+        <p>Registros oficiais capturados por drones (ou roubados do Stark).</p>
+      </div>
+      <div id="api-gallery" class="gallery-grid">
+        <div class="loading-state">Carregando arquivos confidenciais...</div>
+      </div>
     </section>
 
-    <section class="about-section">
-      <h2>PARA QUEM É?</h2>
-      <p>
-        Para quem não leva tudo tão a sério, gosta de cultura pop e quer viver um evento diferente de qualquer outro.
-        Se você já esteve na dúvida entre ser herói ou vilão, provavelmente esse lugar é pra você.
-      </p>
+    <section class="faq-section">
+      <div class="faq-header">
+        <p class="plan-kicker">Perguntas frequentes (e meio óbvias)</p>
+        <h2 class="title-red">Dúvidas Frequentes</h2>
+      </div>
+
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>O evento é perigoso? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>Apenas se você for um figurante sem nome. Para o resto de nós, o máximo que pode acontecer é uma overdose
+              de chimichangas ou uma piada ruim do Logan.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Preciso ir Fantasiado? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>Traje opcional, mas atitude é obrigatória. Se vier de Wolverine, prepare-se para ser o alvo das piadas o
+              dia todo.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Onde vejo os ingressos que já comprei? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>Tudo o que você adquiriu fica guardado na sua página de <a href="./profile.html">Perfil</a>. Se não
+              estiver lá, ou você não comprou, ou o Cable alterou a linha do tempo.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Posso levar meu pet? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>Apenas se for um Dogpool. Outros animais serão avaliados pela nossa equipe de segurança altamente
+              questionável.</p>
+          </div>
+        </details>
+      </div>
     </section>
 
-    <section class="about-section">
-      <h2>COMO PARTICIPAR?</h2>
-      <p>
-        Basta escolher uma invasão na página de <a href="./events.html">Eventos</a>, reservar sua vaga e, se quiser
-        acompanhar tudo de perto, manter seu cadastro em dia na página de <a href="./profile.html">Perfil</a>.
-      </p>
-    </section>
+
   </main>
 
   <script src="../js/navbar.js"></script>
 </body>
+
 </html>

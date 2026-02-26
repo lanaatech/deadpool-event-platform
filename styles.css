@@ -23,7 +23,7 @@ body {
 }
 
 main {
-  margin-top: 2rem;
+  margin-top: -80px;
 }
 
 header {
@@ -88,7 +88,45 @@ header nav a:hover {
   cursor: pointer;
 }
 
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
 .user-auth img:hover {
   transform: scale(1.1);
+}
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+}
+
+.but-type-1 {
+  background-color: var(--deadpool-red);
+  border: 1px solid var(--deadpool-red);
+  color: var(--white);
+  box-shadow: 0 0 15px 5px var(--deadpool-red);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.but-type-1:hover {
+  box-shadow: 0 0 20px 10px var(--deadpool-red);
+  transform: scale(1.05);
+}
+
+.but-type-2 {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.but-type-2:hover {
+  transform: scale(1.05);
 }
 
