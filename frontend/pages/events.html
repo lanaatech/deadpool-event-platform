@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos - Deadpool Event</title>
+  <title>Deadpool - Eventos </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,12 +13,21 @@
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../css/events.css">
 </head>
+
 <body>
   <header>
-    <a href="../../index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
+    <a href="../../index.html"><img
+        src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo"
+        class="logo"></a>
+
+    <div class="hamburger" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="../../index.html">Início</a></li>
         <li><a href="./events.html">Eventos</a></li>
         <li><a href="./invasion-plan.html">Plano de Invasão</a></li>
@@ -34,148 +44,143 @@
   </header>
 
   <main class="events-main">
-    <!-- Hero de eventos -->
     <section class="events-hero">
       <div class="events-hero-content">
         <p class="plan-kicker">Calendario oficial do caos</p>
-        <h1>Eventos</h1>
+        <h1>EVENTOS</h1>
         <p class="hero-subtitle">
-          Escolha sua próxima invasão caótica ao redor do mundo. Palestras, zoeira, katanas e chimichangas incluídas.
-        </p>
+          Selecione seu destino e prepare-se para a experiência mais caótica da sua timeline. O cronograma oficial está em suas mãos. 
+          Garanta seu ingresso agora, antes que a linha do tempo seja resetada. </p>
       </div>
-      <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool%20-%20events.jpg" alt="">
+      <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool-events.png" alt="">
     </section>
 
     <!-- Lista de eventos em cards -->
     <section class="events-section">
       <div class="events-grid">
+
+        <!-- Card 1 -->
         <article class="event-card">
           <div class="event-image">
             <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600" alt="Palco com público">
           </div>
-          <div class="event-meta-top">
-            <span class="event-tag event-tag-imminent">IMINENTE</span>
-            <span class="event-date">2026-03-10</span>
-          </div>
-          <h2 class="event-title">Deadpool &amp; Chatbots do Caos</h2>
-          <p class="event-description">
-            Um painel nada sério sobre IA, automação e como provocar bugs emocionais em robôs.
-          </p>
-          <div class="event-meta-bottom">
-            <span class="event-location">São Paulo, Brasil</span>
-            <span class="event-extra">Ingresso + chimichanga</span>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="location">São Paulo, BR</span>
+              <span class="type">Palestras</span>
+            </div>
+            <h2 class="event-title">Deadpool &amp; Chatbots</h2>
+            <p class="event-description">
+              Um painel nada sério sobre IA, automação e como provocar bugs emocionais em robôs.
+            </p>
+            <button class="but-type-1">Comprar Ingresso</button>
           </div>
         </article>
 
+        <!-- Card 2 -->
         <article class="event-card">
           <div class="event-image">
             <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600" alt="Público em evento">
           </div>
-          <div class="event-meta-top">
-            <span class="event-tag event-tag-premium">PREMIUM</span>
-            <span class="event-date">2026-04-02</span>
-          </div>
-          <h2 class="event-title">Marketing Mortal em Tokyo</h2>
-          <p class="event-description">
-            Estratégias de marketing tão afiadas quanto as katanas do Deadpool, com direito a neons e ramen.
-          </p>
-          <div class="event-meta-bottom">
-            <span class="event-location">Tokyo, Japão</span>
-            <span class="event-extra">Acesso VIP ao after</span>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="location">Tokyo, JP</span>
+              <span class="type">Workshop</span>
+            </div>
+            <h2 class="event-title">Marketing Mortal</h2>
+            <p class="event-description">
+              Estratégias de marketing tão afiadas quanto as katanas do Deadpool.
+            </p>
+            <button class="but-type-1">Comprar Ingresso</button>
           </div>
         </article>
 
+        <!-- Card 3 -->
         <article class="event-card">
           <div class="event-image">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600" alt="Workshop em evento">
+            <img src="https://69b0d75dece241a369f22572.imgix.net/deadpool/room-interior-design.jpg" alt="Workshop em evento">
           </div>
-          <div class="event-meta-top">
-            <span class="event-tag event-tag-workshop">WORKSHOP</span>
-            <span class="event-date">2026-04-15</span>
-          </div>
-          <h2 class="event-title">Treinamento para Invasores Iniciantes</h2>
-          <p class="event-description">
-            Workshop prático para quem quer sobreviver ao primeiro evento sem perder a cabeça (literalmente).
-          </p>
-          <div class="event-meta-bottom">
-            <span class="event-location">Rio de Janeiro, Brasil</span>
-            <span class="event-extra">Nível: Básico</span>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="location">Rio de Janeiro, BR</span>
+              <span class="type">Treinamento</span>
+            </div>
+            <h2 class="event-title">Invasores Iniciantes</h2>
+            <p class="event-description">
+              Sobreviva ao seu primeiro evento sem perder a cabeça (literalmente).
+            </p>
+            <button class="but-type-1">Comprar Ingresso</button>
           </div>
         </article>
 
+        <!-- Card 4 -->
         <article class="event-card">
           <div class="event-image">
-            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=600" alt="Palco iluminado">
+            <img src="https://69b0d75dece241a369f22572.imgix.net/deadpool/female-dj-having-fun-nightclub-stage-creating-funky-clubbing-atmosphere-dance-floor-young-woman-mixing-electronic-music-disco-party-celebration-event-handheld-shot.jpg" alt="Palco iluminado">
           </div>
-          <div class="event-meta-top">
-            <span class="event-tag event-tag-night">NIGHT SESSION</span>
-            <span class="event-date">2026-05-01</span>
-          </div>
-          <h2 class="event-title">Noite de Memes Interdimensionais</h2>
-          <p class="event-description">
-            Uma maratona de piadas ruins, memes e histórias proibidas da linha do tempo oficial.
-          </p>
-          <div class="event-meta-bottom">
-            <span class="event-location">Lisboa, Portugal</span>
-            <span class="event-extra">Open bar de chimichanga</span>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="location">Lisboa, PT</span>
+              <span class="type">Night Session</span>
+            </div>
+            <h2 class="event-title">Noite de Memes</h2>
+            <p class="event-description">
+              Maratona de piadas ruins e histórias proibidas da linha do tempo oficial.
+            </p>
+            <button class="but-type-1">Comprar Ingresso</button>
           </div>
         </article>
 
+        <!-- Card 5 -->
         <article class="event-card">
           <div class="event-image">
             <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=600"
               alt="Palestra tecnológica">
           </div>
-          <div class="event-meta-top">
-            <span class="event-tag event-tag-tech">TECH</span>
-            <span class="event-date">2026-05-20</span>
-          </div>
-          <h2 class="event-title">Multiverso Dev Conference</h2>
-          <p class="event-description">
-            Talks sobre bugs no multiverso, timelines quebradas e como versionar a própria realidade.
-          </p>
-          <div class="event-meta-bottom">
-            <span class="event-location">Nova York, EUA</span>
-            <span class="event-extra">Tradução simultânea (quase fiel)</span>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="location">Nova York, EUA</span>
+              <span class="type">Tech</span>
+            </div>
+            <h2 class="event-title">Multiverso Dev</h2>
+            <p class="event-description">
+              Talks sobre bugs no multiverso e como versionar a própria realidade.
+            </p>
+            <button class="but-type-1">Comprar Ingresso</button>
           </div>
         </article>
 
+        <!-- Card 6 -->
         <article class="event-card">
           <div class="event-image">
             <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600"
               alt="Público animado em evento">
           </div>
-          <div class="event-meta-top">
-            <span class="event-tag event-tag-special">ESPECIAL</span>
-            <span class="event-date">2026-06-05</span>
-          </div>
-          <h2 class="event-title">Parceria Secreta com Logan</h2>
-          <p class="event-description">
-            Um encontro improvável com participação especial de um certo mutante mal-humorado. Spoilers garantidos.
-          </p>
-          <div class="event-meta-bottom">
-            <span class="event-location">Local Secreto</span>
-            <span class="event-extra">Convite por seleção</span>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="location">Local Secreto</span>
+              <span class="type">Especial</span>
+            </div>
+            <h2 class="event-title">Encontro com Logan</h2>
+            <p class="event-description">
+              Participação especial de um certo mutante mal-humorado.
+            </p>
+            <button class="but-type-1">Comprar Ingresso</button>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-      <div class="newsletter-content">
-        <h2>ASSINE A NEWSLETTER DO CAOS</h2>
-        <p>
-          Receba em primeira mão novos eventos, invasões surpresa e cupons de chimichanga diretamente no seu e-mail.
-        </p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail">
-          <button type="submit">Inscrever</button>
-        </form>
-      </div>
-    </section>
   </main>
 
+  <footer>
+    <p>© 2026 Deadpool Event. Nenhuma chimichanga foi ferida na criação deste site.</p>
+  </footer>
+
+  <button id="theme-toggle" class="theme-btn" title="Alternar Tema">🌙</button>
+
   <script src="../js/navbar.js"></script>
+  <script src="../js/script.js"></script>
 </body>
+
 </html>

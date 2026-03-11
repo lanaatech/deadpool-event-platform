@@ -18,8 +18,14 @@
   <header>
     <a href="../../index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
 
+    <div class="hamburger" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="../../index.html">Início</a></li>
         <li><a href="./events.html">Eventos</a></li>
         <li><a href="./invasion-plan.html">Plano de Invasão</a></li>
@@ -57,11 +63,39 @@
           <button type="submit" class="btn-confirm">Entrar</button>
 
           <p class="login-helper">
-            Ainda não tem cadastro? Basta reservar um evento na página de
-            <a href="./events.html">Eventos</a> que criamos um perfil para você automaticamente.
+            Ainda não tem cadastro? <a href="#" id="btn-show-register">Criar conta</a>
           </p>
         </form>
       </div>
+    </section>
+
+    <!-- Seção de Cadastro (Adicionada) -->
+    <section class="login-section" id="register" style="display: none;">
+        <div class="login-card">
+          <h1 class="title-red">NOVO RECRUTA</h1>
+          <p class="login-subtitle">Preencha seus dados antes que a gente desista de você.</p>
+  
+          <form class="register-form">
+            <div class="input-group">
+              <label>Nome de Guerra</label>
+              <input type="text" placeholder="Deadpool Jr." required>
+            </div>
+            <div class="input-group">
+                <label>E-mail</label>
+                <input type="email" placeholder="email@xforce.com" required>
+            </div>
+            <div class="input-group">
+              <label>Senha</label>
+              <input type="password" placeholder="********" required>
+            </div>
+  
+            <button type="submit" class="btn-confirm">Cadastrar</button>
+  
+            <p class="login-helper">
+              Já tem conta? <a href="#" id="btn-show-login">Fazer login</a>
+            </p>
+          </form>
+        </div>
     </section>
 
     <section class="profile-header" id="profile">
@@ -144,7 +178,14 @@
     </section>
   </main>
 
+  <footer>
+    <p>© 2026 Deadpool Event. Nenhuma chimichanga foi ferida na criação deste site.</p>
+  </footer>
+
+  <button id="theme-toggle" class="theme-btn" title="Alternar Tema">🌙</button>
+
   <script src="../js/navbar.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

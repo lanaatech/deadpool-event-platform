@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre o Deadpool Event</title>
+  <title>Deadpool - Sobre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,8 +20,14 @@
         src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo"
         class="logo"></a>
 
+    <div class="hamburger" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="../../index.html">Início</a></li>
         <li><a href="./events.html">Eventos</a></li>
         <li><a href="./invasion-plan.html">Plano de Invasão</a></li>
@@ -41,21 +47,13 @@
     <section class="about-hero">
       <div class="about-hero-content">
         <p class="plan-kicker">Entenda tudo sobre o DeadPool Day</p>
-        <h1>Sobre o Evento e o DeadPool</h1>
-        <p class="hero-subtitle">
-          O Deadpool Event é uma imersão caótica onde a zoeira é a regra número um.
-          Nada de palestras entediantes; aqui o foco é chimichanga, multiverso e tecnologia.
+        <h1>SOBRE O EVENTO</h1>
+        <p class="hero-subtitle">O Deadpool Event não é apenas uma conferência; é o ponto de ruptura entre a tecnologia
+          convencional e o caos criativo. Projetado para quem busca sair da zona de conforto, unimos uma imersão
+          tecnológica de ponta — com integração real de IA e automações — à zoeira ácida do multiverso. Do coffee break
+          com chimichangas ilimitadas aos painéis disruptivos sobre o futuro das timelines, aqui você não é apenas um
+          espectador: você é o protagonista da próxima grande invasão.
         </p>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <div class="gallery-header">
-        <h2 class="title-red">Evidências do Caos</h2>
-        <p>Registros oficiais capturados por drones (ou roubados do Stark).</p>
-      </div>
-      <div id="api-gallery" class="gallery-grid">
-        <div class="loading-state">Carregando arquivos confidenciais...</div>
       </div>
     </section>
 
@@ -97,13 +95,49 @@
               questionável.</p>
           </div>
         </details>
+
+        <!-- Pergunta 5: Dúvida sobre assentos -->
+        <details class="faq-item">
+          <summary>Como escolho o melhor lugar para ver a ação? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>Quer ficar na zona de respingo de chimichanga ou em um lugar seguro (e chato)?
+              Nossa <strong>IA do Pool</strong> analisa seu nível de coragem e sugere o assento ideal.
+              Pergunte a ela no <a href="./invasion-plan.html">Plano de Invasão</a>.</p>
+          </div>
+        </details>
+
+        <!-- Pergunta 6: Dúvida sobre qual evento escolher -->
+        <details class="faq-item">
+          <summary>Não sei qual invasão escolher, e agora? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>São Paulo, Tokyo, Xangai... a indecisão é real. Conte suas preferências para a nossa
+              <strong>Inteligência Artificial</strong> e ela vai filtrar o evento que mais combina
+              com o seu perfil de invasor.
+            </p>
+          </div>
+        </details>
+
+        <!-- Pergunta 7: Dúvida sobre a IA -->
+        <details class="faq-item">
+          <summary>A IA do Pool realmente funciona ou é só zoeira? <span class="arrow"></span></summary>
+          <div class="faq-content">
+            <p>Um pouco de cada. Ela acessa nossa base de dados em tempo real para te dar as melhores
+              opções de viagem e conforto, mas não garantimos que ela não vá te julgar pelas suas escolhas.</p>
+          </div>
+        </details>
       </div>
     </section>
 
-
   </main>
 
+  <footer>
+    <p>© 2026 Deadpool Event. Nenhuma chimichanga foi ferida na criação deste site.</p>
+  </footer>
+
+  <button id="theme-toggle" class="theme-btn" title="Alternar Tema">🌙</button>
+
   <script src="../js/navbar.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

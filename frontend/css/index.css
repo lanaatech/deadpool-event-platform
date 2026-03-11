@@ -51,6 +51,12 @@ main {
   text-align: center;
 }
 
+/* Modo Claro: Título Hero */
+body.light-mode #hero_text {
+  background-image: linear-gradient(90deg, #000, #555);
+  opacity: 0.8; /* Diminuir opacidade conforme pedido */
+}
+
 #hero_text h1 {
   font-size: 15vw;
   font-weight: 900;
@@ -78,6 +84,23 @@ main {
   transform: rotate(-1.5deg);
   box-shadow: 15px 15px 0px var(--deadpool-red);
   transition: transform 0.3s ease;
+}
+
+/* Modo Claro: Banner (Comic Box) */
+body.light-mode .comic-box {
+  border-color: #000;
+  box-shadow: 15px 15px 0px var(--zinc-900); /* Sombra cinza */
+  background: var(--deadpool-red);
+}
+
+/* Forçar texto interno a ser branco para sobrescrever o padrão do modo claro */
+body.light-mode .comic-box h2,
+body.light-mode .comic-box p {
+  color: var(--white);
+}
+
+body.light-mode .comic-box p {
+  opacity: 0.70;
 }
 
 .comic-box:hover {
@@ -120,7 +143,7 @@ main {
 
 .city-card:hover {
   transform: translateY(-10px);
-  border-color: var(--deadpool-red);
+  /* Animação de borda removida */
 }
 
 .city-card img {
@@ -176,6 +199,13 @@ main {
   border-radius: 0 20px 20px 0;
 }
 
+/* Modo Claro: Seção de Dúvidas */
+body.light-mode .ai-text h2,
+body.light-mode .ai-text p,
+body.light-mode .ai-text p span {
+  color: #fff;
+}
+
 .ai-text h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -203,5 +233,11 @@ main {
   #hero_text {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 6rem 1.5rem;
   }
 }

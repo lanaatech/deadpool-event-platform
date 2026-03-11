@@ -10,6 +10,14 @@
   --deadpool-red: #FF001E;
   --deadpool-title-linear: linear-gradient(90deg, #FFF, #898989);
   --zinc-900: #141414;
+  --gray: #f3f3f3;
+
+  /* Cores Modo Claro */
+  --light-bg: #f4f4f4;
+  --light-surface: #ffffff;
+  --light-text-primary: #111111;
+  --light-text-secondary: #333333;
+  --light-border: #dddddd;
 }
 
 html {
@@ -77,6 +85,63 @@ header nav a {
   transition: color 0.3s ease;
 }
 
+/* --- HAMBURGER MENU --- */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  transition: 0.3s;
+}
+
+/* Responsividade do Menu */
+@media (max-width: 900px) {
+  header {
+    padding: 1rem 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 20;
+  }
+
+  header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 15;
+  }
+
+  header nav.active {
+    transform: translateY(0);
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  header nav a {
+    font-size: 2rem;
+  }
+}
+
 header nav a:hover {
   color: var(--deadpool-red);
 }
@@ -130,3 +195,130 @@ button {
   transform: scale(1.05);
 }
 
+/* --- FOOTER GLOBAL --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+  color: #666;
+  font-size: 0.9rem;
+  opacity: 0.6; /* Texto e divisão mais opacos */
+}
+
+/* --- THEME BUTTON --- */
+.theme-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  /* Invertido: Claro no modo escuro */
+  background: #fff;
+  color: #111;
+  border: 2px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+  border-color: #FF001E;
+}
+
+/* --- MODO CLARO (LIGHT MODE) GLOBAL --- */
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text-primary);
+}
+
+/* Links do menu escuros no modo claro */
+body.light-mode header nav a {
+  color: var(--light-text-primary);
+}
+
+body.light-mode .header-glass {
+  background: rgba(240, 240, 240, 0.8); /* Fundo claro semitransparente */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Efeito de vidro */
+}
+
+/* Hamburger escuro no modo claro */
+body.light-mode .hamburger span {
+  background-color: var(--light-text-primary);
+}
+
+/* Ícone de perfil normal (escuro) no modo claro */
+body.light-mode .user-auth img {
+  filter: invert(0);
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode summary {
+  color: var(--light-text-primary);
+}
+
+body.light-mode p {
+  color: var(--light-text-secondary);
+}
+
+body.light-mode .theme-btn {
+  /* Invertido: Escuro no modo claro */
+  background: #111;
+  color: #fff;
+  border-color: var(--light-border);
+}
+
+/* Cards e Containers no Modo Claro */
+body.light-mode .city-card,
+body.light-mode .event-card,
+body.light-mode .login-card,
+body.light-mode .profile-card,
+body.light-mode .faq-item,
+body.light-mode .chat-container {
+  background: var(--light-surface);
+  border-color: var(--light-border);
+  color: var(--light-text-primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .profile-stat-card,
+body.light-mode .ai-message .message-content {
+  background: #eee;
+  border-color: #ccc;
+  color: var(--light-text-primary);
+}
+
+body.light-mode input,
+body.light-mode select,
+body.light-mode .chat-input-area input {
+  background: #f9f9f9;
+  color: var(--light-text-primary);
+  border-color: #ccc;
+}
+
+body.light-mode .plan-kicker,
+body.light-mode .event-description,
+body.light-mode .faq-content {
+  color: #555;
+}
+
+body.light-mode .chat-window {
+  background-color: #f9f9f9;
+  background-image: radial-gradient(var(--light-border) 1px, transparent 1px);
+}
+
+body.light-mode .chat-input-area {
+  background: var(--light-surface);
+  border-top-color: var(--light-border);
+}

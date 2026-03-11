@@ -1,6 +1,7 @@
 /* --- ESTRUTURA BASE --- */
 .about-main {
-  padding: 12rem 8rem 8rem 8rem; /* Padding idêntico ao events-main */
+  padding: 12rem 8rem 8rem 8rem;
+  /* Padding idêntico ao events-main */
 }
 
 /* --- HERO SECTION (ALINHADA COM EVENTOS) --- */
@@ -10,7 +11,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
   gap: 2rem;
+}
+
+.about-hero-content {
+  width: 100%;
+  /* Força o container a ocupar a largura disponível */
+  max-width: 900px;
+  /* Limite de conforto visual para leitura */
+  margin: 0 auto;
+  text-align: center;
 }
 
 .plan-kicker {
@@ -20,57 +32,31 @@
   color: #f3f3f3;
   opacity: 0.85;
   margin-bottom: 0.8rem;
+  text-align: center;
 }
 
 .hero-subtitle {
   font-size: 1.4rem;
-  max-width: 600px;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .about-hero h1 {
-  font-size: 3.5rem;
+  color: var(--deadpool-red);
+  font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   margin-bottom: 1rem;
-}
-
-/* --- GALERIA (ESTILO NEWSLETTER/CARDS) --- */
-.gallery-section {
-  margin-top: 6rem;
-  padding-top: 4rem;
-  border-top: 1px solid #333;
-}
-
-.gallery-header {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+/* Modo Claro: Sobre */
+body.light-mode .about-hero h1 {
+  color: var(--deadpool-red);
 }
-
-/* Estilo para as imagens da API */
-.gallery-item {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid #333;
-  aspect-ratio: 16/9;
-  transition: 0.3s;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gallery-item:hover {
-  border-color: var(--deadpool-red);
-  transform: scale(1.03);
+body.light-mode .plan-kicker,
+body.light-mode .hero-subtitle {
+  color: #000;
 }
 
 /* --- FAQ ACCORDION --- */
@@ -99,13 +85,19 @@
   transition: border-color 0.3s ease;
 }
 
+/* Divisórias mais opacas no modo claro */
+body.light-mode .faq-item {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
 .faq-item[open] {
   border-color: var(--deadpool-red);
   box-shadow: 0 0 20px rgba(255, 0, 30, 0.2);
 }
 
 summary {
-  list-style: none; /* Remove a seta padrão do navegador */
+  list-style: none;
+  /* Remove a seta padrão do navegador */
   padding: 1.5rem 2rem;
   font-size: 1.3rem;
   font-weight: 700;
@@ -135,9 +127,13 @@ summary .arrow::before {
   line-height: 1.6;
   color: #bbb;
   border-top: 1px solid #222;
+  opacity: 0.9; /* Opacidade ajustada */
   animation: slideDown 0.3s ease-out;
 }
 
+body.light-mode .faq-content {
+  border-top-color: rgba(0,0,0,0.1);
+}
 .faq-content a {
   color: var(--deadpool-red);
   text-decoration: none;
@@ -146,8 +142,15 @@ summary .arrow::before {
 
 /* Animação suave ao abrir */
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- RESPONSIVIDADE --- */
@@ -163,7 +166,8 @@ summary .arrow::before {
 
   .hero-side-img {
     width: 200px;
-    order: -1; /* Imagem no topo no mobile */
+    order: -1;
+    /* Imagem no topo no mobile */
   }
 
   .about-hero h1 {

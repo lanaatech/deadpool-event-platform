@@ -12,5 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyGlassEffect();
   window.addEventListener('scroll', applyGlassEffect);
-});
 
+  // Hamburger Menu Logic
+  const hamburger = document.getElementById('hamburger-btn');
+  const nav = document.querySelector('header nav');
+
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
+});
