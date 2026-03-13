@@ -1,0 +1,28 @@
+# Dependências (Nunca suba essa pasta, ela é gigante!)
+node_modules/
+dist/
+build/
+
+# Variáveis de Ambiente (SEGURANÇA: Contém suas chaves do Supabase e OpenAI)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs do Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Arquivos do Sistema e Editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Outros
+.next/
+.vercel/
