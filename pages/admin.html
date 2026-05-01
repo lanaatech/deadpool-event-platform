@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="admin-layout">
+        <!-- Sidebar de Navegação -->
+        <aside class="admin-sidebar">
+            <div class="brand">
+                <span class="logo"><img src="../assets/EMR.png" alt=""></span>
+                <span class="sub-logo">Admin Painel</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="#" class="active">Painel Geral</a>
+                <a href="#">Gerenciar Eventos</a>
+                <a href="#">Relatórios</a>
+            </nav>
+            <button class="but-type-2" onclick="window.location.href = '../index.html'">Voltar ao
+                inicio</button>
+        </aside>
+
+        <!-- Área de Conteúdo -->
+        <section class="admin-content">
+            <div class="admin-main-wrapper"> <!-- Container de Centralização -->
+
+                <header class="content-header">
+                    <h1>Visão Geral</h1>
+                    <button class="but-type-1" onclick="openModal('create')">+ Novo Evento</button>
+                </header>
+
+
+                <!-- Tabela de Gestão (RF16) -->
+                <div class="admin-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Evento</th>
+                                <th>Data</th>
+                                <th>Inscritos</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DeadPool Gamer SSA</td>
+                                <td>22/04/2026</td>
+                                <td>80/100</td>
+                                <td><span class="status-badge open">Aberto</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon"><img src="../assets/pencil-square.svg" alt=""></button>
+                                    <button class="btn-icon red" onclick="confirmDelete()"><img
+                                            src="../assets/trash.svg" alt=""></button>
+                                    <button class="btn-icon-export"><img src="../assets/cloud-arrow-down.svg"
+                                            alt=""></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+    </main>
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,497 @@
+body {
+    background: var(--dark);
+  background: radial-gradient(circle at 80% 20%, #1A1A1A 0%, #080808 100%);
+}
+
+.btn-auth {
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    line-height: 1.1;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    line-height: 1.2;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-visual {
+    position: absolute;
+    right: -20px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.hero-visual .image-wrapper {
+    position: relative;
+    height: 550px;
+}
+
+.hero-visual .image-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Grid de Eventos - Fiel ao PDF */
+.events-section {
+    min-height: 100vh;
+    margin-bottom: 5vh;
+}
+
+.section-header h2 {
+    font-family: 'Montserrat';
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: var(--text-gray);
+    margin-bottom: 60px;
+    max-width: 600px;
+}
+
+.event-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-family: 'Montserrat';
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-card {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Grid de 4 Colunas */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 por linha conforme Frame 2 */
+    gap: 20px;
+}
+
+/* Estilo do Card conforme Figma */
+.event-card {
+    background: #1A1A1A;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.event-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.card-meta {
+    margin-bottom: 10px;
+    color: #FFD700;
+    font-size: 0.8rem;
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: #A0A0A0;
+    margin-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+}
+
+/* Barrinha de Ocupação */
+.occupancy-container {
+    margin-bottom: 20px;
+}
+
+.occupancy-bar {
+    width: 100%;
+    height: 6px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.occupancy-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.occupancy-text {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.btn-more {
+    padding: 8px 85px;
+}
+
+/* Modal Estilo Variação F2 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    /* Ativado via JS */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: #1A1A1A;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    position: relative;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.modal-image {
+    background: #333;
+    height: 350px;
+    border-radius: 12px;
+}
+
+.modal-rating {
+    color: #FFD700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.modal-full-desc {
+    color: #A0A0A0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Mobile: Ajusta para 1 coluna no celular */
+@media (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Container principal da seção como lista vertical */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    /* Organiza os itens um abaixo do outro conforme Frame 3 */
+    gap: 50px;
+    margin-top: 60px;
+    max-width: 100%;
+    /* Alinhamento centralizado para facilitar a leitura */
+}
+
+/* Cada linha do passo a passo */
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Container para o Número + Título na mesma linha */
+.step-header {
+    display: flex;
+    align-items: baseline;
+    /* Alinha a base do número com a do texto */
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+/* O número 01, 02, 03 conforme a imagem */
+.step-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    /* Tamanho grande para destaque  */
+    color: var(--primary);
+    /* Na imagem o número aparece branco/claro */
+    line-height: 1;
+}
+
+/* Título ao lado do número */
+.step-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+/* Descrição abaixo do título com recuo (Indent) */
+.step-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    /* Cinza suave conforme o design [cite: 27, 30, 33] */
+    line-height: 1.5;
+    margin-left: 85px;
+    /* Alinha o texto logo abaixo do início do título */
+    max-width: 100%;
+}
+
+/* Ajuste mobile */
+@media (max-width: 768px) {
+    .step-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step-item p {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+}
+
+/* Widget de IA */
+.ai-widget {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  z-index: 9999;
+}
+
+/* Janela Lateral conforme a imagem */
+.chat-window-lateral {
+  width: 280px;
+  height: 380px;
+  background: rgba(40, 40, 40, 0.95);
+  /* Tom dark profundo */
+  border-radius: 40px;
+  /* Bordas bem arredondadas da imagem */
+  display: none;
+  /* Flex via JS */
+  flex-direction: column;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Bolhas de chat estilizadas como na referência */
+.chat-bubble {
+  height: 35px;
+  border-radius: 20px;
+  background: #444;
+}
+
+.chat-bubble.right {
+  width: 80%;
+  align-self: flex-end;
+}
+
+.chat-bubble.left {
+  width: 70%;
+  align-self: flex-start;
+}
+
+/* Input integrado */
+.chat-input-wrapper {
+  background: #2D2D2D; /* Cinza do input conforme imagem */
+  height: 48px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  position: relative; /* Base para o botão absoluto */
+  width: 100%;
+}
+
+#chat-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+/* Botão de Seta Vermelho da imagem */
+.btn-send-red {
+  width: 40px;
+  height: 40px;
+  background: #C20000;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-send-red span {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Gatilho Circular Vermelho */
+.chat-trigger-red {
+  width: 60px;
+  height: 60px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+/* Ajuste no Wrapper para permitir que o botão "vaze" */
+
+
+
+
+/* O Botão de Seta Vermelho (Fiel ao Frame 6) */
+.btn-send-red {
+  position: absolute;
+  right: -5px; /* Faz o botão "vazar" para a direita */
+  width: 65px;  /* Mais largo que alto para ser oval */
+  height: 48px; /* Mesma altura do wrapper para encaixe perfeito */
+  background: #C20000;
+  border-radius: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+

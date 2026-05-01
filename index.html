@@ -1,128 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deadpool</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <title>EMR | Gerenciador de Eventos</title>
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="./frontend/css/index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <a href="index.html"><img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/logo.png" alt="Logo" class="logo"></a>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="./frontend/pages/events.html">Eventos</a></li>
-        <li><a href="./frontend/pages/invasion-plan.html">Plano de Invasão</a></li>
-        <li><a href="./frontend/pages/about.html">Sobre</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-auth">
-      <a href="./frontend/pages/profile.html" class="btn-profile">
-        <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/person.svg"
-          alt="icon profile">
-      </a>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <span class="logo"><img src="./assets/EMR.png" alt=""></span>
+        <span class="sub-logo">By DeadPool</span>
+      </div>
+      <nav class="nav-links">
+        <button class="but-type-2 btn-auth" onclick="window.location.href = './pages/auth.html'">Entrar</button>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section id="hero-section">
-      <div id="hero_image">
-        <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/deadpool.png"
-          alt="Deadpool com os braços cruzados olhando em direção ao leitor">
-        <span id="hero_image_circle"></span>
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>O próximo grande momento a um clique de distância.</h1>
+      <p>Esqueça convenções chatas. O Deadpool Event é uma imersão caótica onde você é o protagonista. Música,
+        chimichangas ilimitadas e a chance de ver o Logan de mau humor.</p>
+      <div class="hero-actions">
+        <button class="but-type-1" onclick="location.href='#eventos'"></a>Explorar Eventos</button>
+        <button class="but-type-2" onclick="location.href='#como-funciona'">Como Funciona</button>
       </div>
-
-      <div id="hero_text">
-        <h1>DEADPOOL</h1>
+    </div>
+    <div class="hero-visual">
+      <div class="image-wrapper">
+        <img src="./assets/deadpool.png" alt="Deadpool Impact">
       </div>
+    </div>
+  </section>
 
-      <div class="hero_buttons">
-        <button class="but-type-1" id="book-now">Reservar agora</button>
-        <button class="but-type-2" id="see-tickets">Saber mais</button>
-      </div>
-    </section>
+  <section id="eventos" class="events-section container">
+    <div class="section-header">
+      <h2>Eventos</h2>
+      <p>Esqueça convenções chatas. O Deadpool Event é uma imersão caótica.</p>
+    </div>
 
-    <section id="about-event">
-      <div class="container">
-        <div class="comic-box">
-          <h2 class="section-title">O QUE É ESSA ZOEIRA?</h2>
-          <p>Esqueça convenções chatas. O <strong>Deadpool Event</strong> é uma imersão caótica onde você é o
-            protagonista (ou o figurante que morre primeiro, você escolhe). Música, chimichangas ilimitadas e a chance
-            de ver o Logan de mau humor.</p>
+    <div class="events-grid">
+      <article class="event-card" onclick="openModal()">
+        <div class="card-img"></div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="rating">★ 5.0</span>
+          </div>
+          <h3>DeadPool Gamer SSA</h3>
+          <p class="card-desc">A maior reunião gamer de Salvador está de volta e promete entregar tudo.</p>
+
+          <div class="occupancy-container">
+            <div class="occupancy-bar">
+              <div class="occupancy-fill" style="width: 80%;"></div>
+            </div>
+            <span class="occupancy-text">80/100 vagas ocupadas</span>
+          </div>
+
+          <button class="but-type-2 btn-more">Ver Mais</button>
         </div>
-      </div>
-    </section>
+      </article>
+    </div>
+  </section>
 
-    <section id="global-tour">
-      <h2 class="tour-title">PRÓXIMAS INVASÕES</h2>
-      <div class="cards-container">
-        <article class="city-card">
-          
-          <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/brasil.jpg" alt="São Paulo">
-          <div class="card-info">
-            <span>Brasil</span>
-            <h3>SÃO PAULO</h3>
-            <p>Prepare o protetor solar e a katana.</p>
-            <a href="./frontend/pages/events.html" class="btn-card">Ver Detalhes</a>
-          </div>
-        </article>
-
-        <article class="city-card">
-          <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/china.jpg" alt="Tokyo">
-          <div class="card-info">
-            <span>Japão</span>
-            <h3>TOKYO</h3>
-            <p>Neon, Robôs e muita confusão.</p>
-            <a href="./frontend/pages/events.html" class="btn-card">Ver Detalhes</a>
-          </div>
-        </article>
-
-        <article class="city-card">
-          <img src="https://defpobkbmfqnkxowkkct.supabase.co/storage/v1/object/public/files/asia.jpg" alt="Asia">
-          <div class="card-info">
-            <span>Asia</span>
-            <h3>XANGAI</h3>
-            <p>Neon, Robôs e muita confusão.</p>
-            <a href="./frontend/pages/events.html" class="btn-card">Ver Detalhes</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="ai-cta">
-      <div class="ai-box">
-        <div class="ai-text">
-          <h2>DÚVIDAS SOBRE A INVASÃO?</h2>
-          <p>
-            <span>De Salvador a Tokyo:</span> pergunte o que quiser para minha IA. Seja para achar o melhor assento ou
-            para buscar o evento que mais se encaixa no seu perfil,
-            ela resolve (e talvez te xingue um pouco).
+  <div id="eventModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-image"></div>
+        <div class="modal-info">
+          <h2>DeadPool Gamer SSA</h2>
+          <p class="modal-full-desc">
+            Prepare-se para a maior imersão gamer de Salvador. Com torneios,
+            cosplays e a presença ilustre (ou não) do mercenário tagarela.
+            Vagas limitadas para garantir o caos organizado.
           </p>
-          <button class="but-type-1" id="consult-ia">CONSULTAR IA DO POOL</button>
+          <span class="modal-rating">★ 5.0</span>
+          <div class="modal-stats">
+            <div class="stat-item">
+              <strong>Data:</strong> 22 Abr, 2026
+            </div>
+            <div class="stat-item">
+              <strong>Local:</strong> Arena Salvador
+            </div>
+          </div>
+          <div class="occupancy-container large">
+            <div class="occupancy-bar">
+              <div class="occupancy-fill" style="width: 80%;"></div>
+            </div>
+            <span class="occupancy-text">80/100 vagas ocupadas</span>
+          </div>
+          <button class="but-type-1">Reservar Minha Vaga</button>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <footer>
-    <p>© 2026 Deadpool Event. Nenhuma chimichanga foi ferida na criação deste site.</p>
+  <section id="como-funciona" class="how-section container">
+    <div class="section-header">
+      <h2>Como funciona</h2>
+      <p>Esqueça convenções chatas. O Deadpool Event é uma imersão caótica onde você é o protagonista.</p>
+    </div>
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-header">
+          <span class="step-num">01</span>
+          <h4>Explore e Descubra</h4>
+        </div>
+        <p>Navegue pelo nosso catálogo de eventos ativos. Use nossos filtros por categoria ou local para encontrar
+          exatamente o que você procura. [cite: 27]</p>
+      </div>
+
+      <div class="step-item">
+        <div class="step-header">
+          <span class="step-num">02</span>
+          <h4>Peça ajuda ao Assistente</h4>
+        </div>
+        <p>Nossa IA analisa seu histórico para sugerir o evento perfeito.</p>
+      </div>
+
+      <div class="step-item">
+        <div class="step-header">
+          <span class="step-num">03</span>
+          <h4>Garanta sua Vaga</h4>
+        </div>
+        <p>Ao escolher, clique em "Reservar". Validamos a disponibilidade em tempo real.</p>
+      </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-contacts">
+        <h5>Contatos</h5>
+        <p>Salvador - (71) 9000-0000</p>
+        <p>Salvador - (71) 9000-0000</p>
+        <p>Salvador - (71) 9000-0000</p>
+        <p>Salvador - (71) 9000-0000</p>
+      </div>
+      <div class="footer-brand">
+        <span class="logo"><img src="./assets/EMR-red.png" alt=""></span>
+        <span class="sub-logo">Feito por ARTDR</span>
+      </div>
+      <div class="footer-social">
+            <a href="#">Instagram</a>
+            <a href="#">Tiktok</a>
+            <a href="#">Twitter - X</a>
+        </div>
+    </div>
   </footer>
 
-  <button id="theme-toggle" class="theme-btn" title="Alternar Tema">🌙</button>
+  <div id="ai-chat-container" class="ai-widget">
+        <!-- Janela de Chat Lateral (Fiel à imagem enviada) -->
+        <div class="chat-window-lateral" id="chat-window">
+            <div class="chat-content">
+                <div class="chat-bubble right"></div>
+                <div class="chat-bubble left"></div>
+            </div>
 
-  <script src="./frontend/js/script.js"></script>
-  <script src="./frontend/js/navbar.js"></script>
+            <!-- Input com Botão de Seta Vermelho -->
+            <div class="chat-input-wrapper">
+                <input type="text" placeholder="Escreva aqui..." id="chat-input">
+                <button class="btn-send-red" id="send-btn">
+                    <img src="./assets/arrow-right-short.svg" width="24" height="24" fill="white" alt="enviar">
+                </button>
+            </div>
+        </div>
+
+        <!-- Botão de Gatilho (Círculo Vermelho conforme imagem) -->
+        <div class="chat-trigger-red" id="chat-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path
+                    d="M12 2C6.47 2 2 6.47 2 12c0 2.02.6 3.9 1.61 5.48L2 22l4.52-1.61C8.1 21.4 9.98 22 12 22c5.53 0 10-4.47 10-10S17.53 2 12 2z" />
+            </svg>
+        </div>
+    </div>
+    </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

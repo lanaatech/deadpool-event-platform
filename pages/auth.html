@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMR | Cadastro&Login</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="brand">
+                <span class="logo"><img src="../assets/EMR.png" alt=""></span>
+                <span class="sub-logo">By DeadPool</span>
+            </div>
+            <nav class="nav-links">
+                <button class="but-type-2 btn-auth" onclick="window.location.href = '../index.html'">Voltar ao
+                    inicio</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-container">
+
+        <!-- Card de Login -->
+        <section class="auth-card" id="login-card">
+            <h2>Login</h2>
+            <form id="form-login">
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <a href="#" class="form-link">Esqueceu a senha? Click aqui</a>
+                <button type="submit" class="but-type-1">Entrar</button>
+            </form>
+            <p class="toggle-text">Não tem cadastro? <span onclick="toggleAuth()">Cadastre-se</span></p>
+        </section>
+
+        <!-- Card de Cadastro (Escondido por padrão) -->
+        <section class="auth-card" id="register-card" style="display: none;">
+            <h2>Cadastre-se</h2>
+            <form id="form-register">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="text" placeholder="Apelido" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+            </form>
+            <p class="toggle-text">Já tem cadastro? <span onclick="toggleAuth()">Click aqui</span></p>
+            <button type="submit" class="but-type-1">Cadastrar</button>
+        </section>
+    </main>
+
+    <script>
+        function toggleAuth() {
+            const loginCard = document.getElementById('login-card');
+            const registerCard = document.getElementById('register-card');
+
+            if (loginCard.style.display === 'none') {
+                loginCard.style.display = 'block';
+                registerCard.style.display = 'none';
+            } else {
+                loginCard.style.display = 'none';
+                registerCard.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
